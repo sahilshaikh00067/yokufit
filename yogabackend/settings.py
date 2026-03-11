@@ -1,12 +1,13 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-r9)m-mqaid3rnkdf(z*fvgs3%3i(2u254o_am*=4(nai1xqkp@'
+SECRET_KEY = 'django-insecure-change-this-key'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # ---------------------------
 # APPLICATIONS
@@ -19,14 +20,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Third-party
+    # Third party
     'rest_framework',
     'corsheaders',
+    'django_extensions',
     'jazzmin',
 
-    # Local
+    # Local apps
     'api',
-    'django_extensions',
 ]
 
 # ---------------------------
@@ -34,9 +35,13 @@ INSTALLED_APPS = [
 # ---------------------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+
+    # Static files production
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
 
-    # ✅ CORS middleware (IMPORTANT: session ke baad)
+    # CORS
     'corsheaders.middleware.CorsMiddleware',
 
     'django.middleware.common.CommonMiddleware',
@@ -93,20 +98,27 @@ AUTH_PASSWORD_VALIDATORS = [
 # ---------------------------
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
+
 USE_I18N = True
 USE_TZ = True
 
 # ---------------------------
 # STATIC FILES
 # ---------------------------
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # ---------------------------
 # MEDIA FILES
 # ---------------------------
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 # ---------------------------
@@ -115,23 +127,24 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ---------------------------
-# DRF SETTINGS
+# DJANGO REST FRAMEWORK
 # ---------------------------
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
     ]
 }
 
 # ---------------------------
-# ✅ CORS SETTINGS (FINAL FIX)
+# CORS SETTINGS
 # ---------------------------
-# Development ke liye easiest & safest
 CORS_ALLOW_ALL_ORIGINS = True
 
 # ---------------------------
-# JAZZMIN SETTINGS
+# JAZZMIN ADMIN PANEL
 # ---------------------------
 JAZZMIN_SETTINGS = {
     "site_title": "SAHIL",
+    "site_header": "YokuFit Admin",
+    "site_brand": "YokuFit",
 }
