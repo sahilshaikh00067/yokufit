@@ -1,0 +1,8 @@
+.backh {
+    background-image: url(../../assets//Images/offline1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}

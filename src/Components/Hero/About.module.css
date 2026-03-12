@@ -1,0 +1,55 @@
+.bga{
+    background-image: url(../../assets/Images/about5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh; 
+    padding-top: 20px;
+    
+
+}
+.bga button{
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+
+}
+.off {
+    background-image: url(../../assets/Images/about1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ban{
+    background-image: url(../../assets/Images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 660px;
+    position: relative;
+    margin-top: 180px;
+}
+.ban img{
+    width: 80%;
+}
+.ban input{
+    border-radius: 28px;
+    padding: 20px 96px;
+    text-align: left;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0,0.07);
+    background-color: #FFFFFF;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+
