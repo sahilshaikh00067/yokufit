@@ -144,7 +144,7 @@ fetch("https://yokufit.onrender.com/api/posts/")
                         {posts.slice(0, 6).map((post) => (
                             <div key={post.id} className="flex flex-col items-center">
                                 <img
-                                    src={`http://yokufit.onrender.com${post.image2}`}
+                                    src={`https://yokufit.onrender.com${post.image2}`}
                                     alt={post.titles}
                                     className="h-120 object-cover"
                                 />

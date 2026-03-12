@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const API_BASE = "http://yokufit.onrender.com/api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 export default function SingleBlog() {
   const { id } = useParams();
@@ -75,7 +75,7 @@ export default function SingleBlog() {
         {/* Image */}
         {article.image1 && (
           <motion.img
-            src={`http://yokufit.onrender.com${article.image1}`}
+            src={`https://yokufit.onrender.com${article.image1}`}
             alt={article.title1}
             className="w-full h-[320px] md:h-[500px] object-cover rounded-2xl shadow-lg mb-10"
             initial={{ opacity: 0, scale: 0.95 }}

@@ -16,7 +16,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 
-const API_BASE = "http://yokufit.onrender.com/api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 export default function SinglePost() {
   const { id } = useParams();
@@ -360,7 +360,7 @@ export default function SinglePost() {
             {post.image2 && (
               <div className="relative overflow-hidden group">
                 <img
-                  src={`http://yokufit.onrender.com${post.image2}`}
+                  src={`https://yokufit.onrender.com${post.image2}`}
                   alt={post.title}
                   className="w-95 h-[265px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -388,7 +388,7 @@ export default function SinglePost() {
             {post.image && (
               <div className="relative overflow-hidden group">
                 <img
-                  src={`http://yokufit.onrender.com${post.image}`}
+                  src={`https://yokufit.onrender.com${post.image}`}
                   alt={post.titles}
                   className="w-95 h-[265px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />

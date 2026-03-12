@@ -5,7 +5,7 @@ function Posts() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://yokufit.onrender.com/api/posts/")
+    axios.get("https://yokufit.onrender.com/api/posts/")
       .then((res) => setPosts(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -20,7 +20,7 @@ function Posts() {
           <p>{post.paragraph}</p>
           {post.image && (
             <img
-              src={`http://yokufit.onrender.com${post.image}`}
+              src={`https://yokufit.onrender.com${post.image}`}
               alt={post.title}
               className="w-48 mt-2"
             />

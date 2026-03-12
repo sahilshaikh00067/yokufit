@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 
 
-const API_BASE = "http://yokufit.onrender.com/api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 export default function SingleDownPost() {
     const { id } = useParams();
@@ -53,7 +53,7 @@ export default function SingleDownPost() {
             </div>
             <div>
                 <img
-                    src={`http://yokufit.onrender.com${post.image2}`}
+                    src={`https://yokufit.onrender.com${post.image2}`}
                     alt={post.title}
                     className="absolute bottom-40 left-[550px] w-90 h-90 object-cover transition-transform duration-500 rounded-full"
                 />
@@ -187,7 +187,7 @@ export default function SingleDownPost() {
       {img && (
         <div className="relative overflow-hidden group">
           <motion.img
-            src={`http://yokufit.onrender.com${img}`}
+            src={`https://yokufit.onrender.com${img}`}
             alt={i === 0 ? post.title : post.titles}
             className="w-95 h-[265px] object-cover transition-transform duration-500 group-hover:scale-110"
             initial={{ opacity: 0, scale: 1.05 }}

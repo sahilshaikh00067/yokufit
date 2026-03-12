@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const API_BASE = "http://yokufit.onrender.com//api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 export default function SingleArticle() {
     const { id } = useParams();
@@ -35,7 +35,7 @@ export default function SingleArticle() {
             <h2>{article.title1}</h2>
             {article.image1 && (
                 <img
-                    src={`http://yokufit.onrender.com${article.image1}`}
+                    src={`https://yokufit.onrender.com${article.image1}`}
                     alt={article.title1}
                     style={{ width: '100%', maxWidth: '600px' }}
                 />

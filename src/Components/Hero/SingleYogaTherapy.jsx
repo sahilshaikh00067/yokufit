@@ -14,7 +14,7 @@ import { motion } from "framer-motion"
 
 
 // ✅ Define your API base
-const API_BASE = "http://yokufit.onrender.com/api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 const SingleYogaTherapy = () => {
     const { id } = useParams();
@@ -83,7 +83,7 @@ const SingleYogaTherapy = () => {
                 <div className="">
                     {post.image3 && (
                         <img
-                            src={`http://yokufit.onrender.com${post.image3}`}
+                            src={`https://yokufit.onrender.com${post.image3}`}
                             alt={post.title}
                             className=""
                         />
@@ -100,7 +100,7 @@ const SingleYogaTherapy = () => {
 
                     {post.image4 && (
                         <img
-                            src={`http://yokufit.onrender.com${post.image4}`}
+                            src={`https://yokufit.onrender.com${post.image4}`}
                             alt={post.title}
                             className="h-180 w-full pt-25 relative"
                         />

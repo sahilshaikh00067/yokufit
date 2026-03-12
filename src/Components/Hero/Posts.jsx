@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const API_BASE = "http://yokufit.onrender.com/api";
+const API_BASE = "https://yokufit.onrender.com/api";
 
 
 export default function Posts() {
@@ -41,7 +41,7 @@ export default function Posts() {
                         </h3>
                         {post.image && (
                             <img
-                                src={`http://yokufit.onrender.com${post.image}`}
+                                src={`https://yokufit.onrender.com${post.image}`}
                                 alt={post.title}
                                 style={{ width: '100%' }}
                             />
